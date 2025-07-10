@@ -5,26 +5,26 @@ const searchbox = document.querySelector(".search input");
 const searchbtn = document.querySelector(".search button");
 const weathericon = document.querySelector(".weather-icon");
 
-//async keyword: Marks the function as asynchronous, allowing it to use await inside,checkweather(city): This function takes a city name as input and fetches weather data for it
+
 async function checkweather(city) {
-    const response = await fetch(apiurl + city + `&appid=${apikey}`);   //it Stores the HTTP response from the API.
-    var data =  await response.json();     //await response.json(): Extracts JSON data from the API response, data: Stores the parsed JSON object containing weather details.
+    const response = await fetch(apiurl + city + `&appid=${apikey}`);   
+    var data =  await response.json();   
     
 
-    if (data.cod == "404") {            // Checks if the API returns error code 404 (city not found).
+    if (data.cod == "404") {           
         alert("Invalid city name. Please enter a valid city.");
-        return;                        // Stop execution if city is invalid
+        return;                 
     }
 
 
-    console.log(data);    //  Prints the entire API response to the browser's console for debugging, it Helps in checking weather details, temperature, humidity, etc.
+    console.log(data);  
 
-    document.querySelector(".city").innerHTML = data.name;  // it will update the city name
-    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + " °c";   //round()	Rounds to the nearest integer (rounds .5 to even)
+    document.querySelector(".city").innerHTML = data.name; 
+    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + " °c";   
     document.querySelector(".humidity").innerHTML = data.main.humidity + " %";
     document.querySelector(".wind").innerHTML = data.wind.speed + " Km/h";
 
-    //Changing Weather Icon Based on Conditions
+   
     if(data.weather[0].main == "Clouds"){
         weathericon.src = "images/cloudy.png";
     }
@@ -44,9 +44,9 @@ async function checkweather(city) {
         weathericon.src = "images/snowy.png";
     }
 
-    document.querySelector(".weather").style.display = "block";  //Shows the weather details section by setting display = "block" and  this section is hidden using display: none; in CSS.
+    document.querySelector(".weather").style.display = "block";  
 }
 
 searchbtn.addEventListener("click", ()=>{
-    checkweather(searchbox.value); //When clicked, it runs and call checkweather function with parameter is searchbox.value which contains input city name
+    checkweather(searchbox.value);
 })
