@@ -84,14 +84,15 @@ body{
 .weather {
     display: none;
 }
-
-
 @media (max-width: 477px) {
     .card {
         margin-top: 45px;
-        padding: 40px 10px;
+        padding: 40px 4px;
     }
     .details {
         padding: 0 0;
+    }
+    .search input {
+        margin-right: 6px;
     }
 }
