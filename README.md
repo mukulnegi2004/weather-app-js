@@ -25,6 +25,12 @@ A **responsive** and **interactive** weather application built using **HTML**, *
 
 ---
 
+## 🚀 Live Demo
+
+[Click here to view the live project]()
+
+---
+
 ## 🛠️ How to Run Locally
 
 1. Clone or download the repository
