@@ -27,7 +27,7 @@ A **responsive** and **interactive** weather application built using **HTML**, *
 
 ## 🚀 Live Demo
 
-[Click here to view the live project]()
+[Click here to view the live project]( https://mukulnegi2004.github.io/weather-app-js/)
 
 ---
 
@@ -61,7 +61,7 @@ weather-app-js/
 ## 📬 Connect with Me
 
 - 💼 [GitHub](https://github.com/mukulnegi2004)
-- 💬 [LinkedIn](https://linkedin.com/in/your-link)
+- 💬 [LinkedIn](https://www.linkedin.com/in/mukul-negi-75b741374/)
 - 📫 Email: mannunegi126@gmail.com
 
 ---
